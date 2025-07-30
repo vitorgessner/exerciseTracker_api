@@ -6,9 +6,73 @@
 
 html {
     font-size: 16px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+body {
+    background-color: rgb(248, 239, 228);
 }
 
 h1 {
     text-align: center;
     margin: 3rem;
+}
+
+fieldset {
+    width: 50%;
+    max-width: 30rem;
+    min-width: 20rem;;
+    margin: 2rem auto;
+    padding: 2rem;
+    border: 5px solid rgb(245, 222, 179);
+    background-color: antiquewhite;
+    border-radius: 1rem;
+}
+
+fieldset legend {
+    font-size: 1.5rem;
+    padding: 0 0 1rem 0
+}
+
+fieldset label {
+    font-size: 1.2rem;
+}
+
+fieldset label input[type="text"] {
+    padding: .5rem;
+    border-radius: .3rem;
+    border: 4px solid wheat;
+    margin: .5rem 0;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 1.1rem;
+    color: rgb(46, 46, 46);
+    letter-spacing: .08rem;
+}
+
+fieldset label input[type="text"]::selection {
+    background-color: wheat;
+}
+
+fieldset label input[type="text"]:active, fieldset label input[type="text"]:focus, fieldset input[type="submit"]:active, fieldset input[type="submit"]:focus {
+    outline: 3px solid rgb(255, 255, 255);
+    outline-offset: 2px;
+}
+
+form div, fieldset label {
+    display: flex;
+    flex-direction: column;
+}
+
+fieldset input[type="submit"] {
+    padding: .5rem .8rem;
+    background-color: white;
+    border: 4px solid wheat;
+    border-radius: .3rem;
+    font-size: 1rem;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    display: block;
+    width: 100%;
+}
+fieldset input[type="submit"]:hover, fieldset input[type="submit"]:active, fieldset input[type="submit"]:focus {
+    background-color: rgb(250, 243, 236);
 }

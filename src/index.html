@@ -1,12 +1,45 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Exercise Tracker</title>
     <link rel="stylesheet" href="/css/style.css">
 </head>
+
 <body>
     <h1>Excercise Tracker Api</h1>
+    <fieldset>
+        <form action="/api/users" method="post">
+            <legend>Create a new user</legend>
+            <label for="username">Username:
+                <input type="text" name="username" id="username">
+            </label>
+            <input type="submit" value="Create user">
+        </form>
+    </fieldset>
+
+    <fieldset>
+        <form action="/api/users/:_id/exercises" method="post">
+            <legend>Add exercises</legend>
+            <div>
+                <label for="username_exercise">_id of the user:
+                    <input type="text" name="username_exercise" id="username_exercise">
+                </label>
+                <label for="description">description:
+                    <input type="text" name="description" id="description">
+                </label>
+                <label for="duration">duration:
+                    <input type="text" name="duration" id="duration">
+                </label>
+                <label for="date">date:
+                    <input type="text" name="date" id="date">
+                </label>
+            </div>
+            <input type="submit" value="Submit exercise">
+        </form>
+    </fieldset>
 </body>
+
 </html>
