@@ -10,7 +10,8 @@ const writeUser = require(__dirname + '/src/writeUser.js').default;
 const readExercises = require(__dirname + '/src/readExercises.js').default;
 const writeExercise = require(__dirname + '/src/writeExercise.js').default;
 
-app.use(bodyParser.urlencoded({ extended: false }));
+app.use(express.json());
+app.use(bodyParser.urlencoded({ extended: true }));
 app.use(express.static(__dirname + '/public'))
 
 app.get('/', (req, res) => {
@@ -43,7 +44,8 @@ app.get('/api/users/:_id/exercises', async (req, res) => {
 });
 
 app.post('/api/users/:_id/exercises', async (req, res) => {
-    let {_id, description, duration, date} = req.body;
+    let {_id} = req.params;
+    let {description, duration, date} = req.body;
     _id = Number(_id);
     date = date === '' ? new Date().toDateString() : new Date(date).toDateString();
     duration = Number(duration);

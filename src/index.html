@@ -21,7 +21,7 @@
     </fieldset>
 
     <fieldset>
-        <form action="/api/users/:_id/exercises" method="post">
+        <form action="/api/users/:_id/exercises" method="post" id="exercise">
             <legend>Add exercises</legend>
             <div>
                 <label for="_id">_id of the user:
@@ -40,6 +40,18 @@
             <input type="submit" value="Submit exercise">
         </form>
     </fieldset>
+    <div id="response"></div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const form = document.getElementById('exercise');
+
+            form.addEventListener('submit', (e) => {
+                const userId = form._id.value;
+                form.action = `/api/users/${userId}/exercises`;
+            });
+        });
+    </script>
 </body>
 
 </html>
