@@ -24,17 +24,17 @@
         <form action="/api/users/:_id/exercises" method="post">
             <legend>Add exercises</legend>
             <div>
-                <label for="username_exercise">_id of the user:
-                    <input type="text" name="username_exercise" id="username_exercise">
+                <label for="_id">_id of the user:
+                    <input type="number" name="_id" id="_id" min="0">
                 </label>
                 <label for="description">description:
                     <input type="text" name="description" id="description">
                 </label>
                 <label for="duration">duration:
-                    <input type="text" name="duration" id="duration">
+                    <input type="number" name="duration" id="duration" min="0">
                 </label>
                 <label for="date">date:
-                    <input type="text" name="date" id="date">
+                    <input type="date" name="date" id="date">
                 </label>
             </div>
             <input type="submit" value="Submit exercise">

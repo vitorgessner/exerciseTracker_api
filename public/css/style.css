@@ -38,7 +38,7 @@ fieldset label {
     font-size: 1.2rem;
 }
 
-fieldset label input[type="text"] {
+fieldset label input {
     padding: .5rem;
     border-radius: .3rem;
     border: 4px solid wheat;
@@ -49,11 +49,11 @@ fieldset label input[type="text"] {
     letter-spacing: .08rem;
 }
 
-fieldset label input[type="text"]::selection {
+fieldset label input::selection {
     background-color: wheat;
 }
 
-fieldset label input[type="text"]:active, fieldset label input[type="text"]:focus, fieldset input[type="submit"]:active, fieldset input[type="submit"]:focus {
+fieldset label input:active, fieldset label input:focus, fieldset input[type="submit"]:active, fieldset input[type="submit"]:focus {
     outline: 3px solid rgb(255, 255, 255);
     outline-offset: 2px;
 }
@@ -75,4 +75,10 @@ fieldset input[type="submit"] {
 }
 fieldset input[type="submit"]:hover, fieldset input[type="submit"]:active, fieldset input[type="submit"]:focus {
     background-color: rgb(250, 243, 236);
+}
+
+input::-webkit-datetime-edit-day-field:focus,
+input::-webkit-datetime-edit-month-field:focus,
+input::-webkit-datetime-edit-year-field:focus {
+    background-color: wheat;
 }
